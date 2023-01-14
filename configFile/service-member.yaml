@@ -1,0 +1,6 @@
+spring:
+  datasource: # mysql数据库连接
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://192.168.100.10:3306/tb_member?serverTimezone=GMT%2B8
+    username: root
+    password: 123456
