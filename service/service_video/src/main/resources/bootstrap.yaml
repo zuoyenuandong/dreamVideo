@@ -1,0 +1,35 @@
+spring:
+  application:
+    name: service-video # 服务名
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 192.168.100.10:8848
+        namespace: dev
+        group: dev
+      config:
+        server-addr: 192.168.100.10:8848
+        namespace: dev
+        group: dev
+        file-extension: yaml
+        username: nacos
+        password: nacos
+        shared-configs:
+          - data-id: common.yaml
+            group: dev
+            file-extension: yaml
+            namespace: dev
+            refresh: true
+          - data-id: service-member.yaml
+            group: dev
+            file-extension: yaml
+            namespace: dev
+            refresh: true
+#mybatis日志
+mybatis-plus:
+  configuration:
+    #    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+    log-impl: org.apache.ibatis.logging.nologging.NoLoggingImpl
+  mapper-locations: classpath:com/kuang/service/member/mapper/xml/*.xml
+
+
