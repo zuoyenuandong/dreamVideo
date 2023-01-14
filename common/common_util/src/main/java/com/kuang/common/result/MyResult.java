@@ -15,24 +15,24 @@ public class MyResult {
 
     private Object data;
 
-    private MyResult(){
+    public MyResult(){
         this.code = CodeEnum.CODE_SUCCESS.getCode();
         this.message = CodeEnum.CODE_SUCCESS.getMessage();
     }
-    private MyResult(Integer code,String message){
+    public MyResult(Integer code,String message){
         this.code = code;
         this.message = message;
     }
-    private MyResult(CodeEnum codeEnum){
+    public MyResult(CodeEnum codeEnum){
         this.code = codeEnum.getCode();
         this.message = codeEnum.getMessage();
     }
-    private MyResult(Integer code,String message,Object data){
+    public MyResult(Integer code,String message,Object data){
         this.code = code;
         this.message = message;
         this.data = data;
     }
-    private MyResult setData(Object data){
+    public MyResult setData(Object data){
         this.data = data;
         return this;
     }
